@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -5,7 +6,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-const API_KEY = "461a83eb06accbc9e431c48026b3f4a2";
+const API_KEY = process.env.API_KEY;;
 
 app.get("/weather/:city", async (req, res) => {
 
